@@ -1,6 +1,6 @@
 # React + Vite
 
-live: <a href="https://65e123a6e014d5508a64a89e--splendid-truffle-f1a668.netlify.app/" target="_blank">Open My Live Project<a/>
+<a href="https://65e123a6e014d5508a64a89e--splendid-truffle-f1a668.netlify.app/">Open My Live Project<a/>
 
 # You can look about Weather Check Project
 
