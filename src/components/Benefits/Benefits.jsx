@@ -28,7 +28,9 @@ function Benefits() {
     return (
         <>
             <h1 className='fs-1 text-light fst-italic fw-lighter text-center m-4'>News About Weather</h1>
-            <div className='my-4 d-flex align-items-center justify-content-evenly'>
+            <div className='my-4 d-flex align-items-center justify-content-evenly' style={{
+                objectFit: "cover"
+            }}>
                 {selectedNews.map((item, index) => (
                     <Card
                         key={index}
@@ -37,16 +39,21 @@ function Benefits() {
                         inverse
                         style={{
                             width: '18rem',
+                            height:"525px"
                         }}
                     >
                         <img
-                            className='rounded-top'
-                            alt="Sample"
-                            src={item.media[0]['media-metadata'][0]['url']}
+                            src={item.media && item.media.length > 0 && item.media[0]['media-metadata'] ? item.media[0]['media-metadata'][0].url : 'varsayılan-resim-url'}
+                            className='shadow-lg rounded-top'
+                            alt="picture"
+                            style={{
+                                height: "300px",
+                                objectFit: "cover"
+                            }}
                         />
                         <CardBody>
                             <CardTitle tag="h5" className='fs-4 fst-italic fw-lighter'>
-                                {item.title.length > 10 ? item.title.substring(0, 30) + "..." : title}
+                                {item.title.length > 30 ? item.title.substring(0, 30) + "..." : item.title}
                             </CardTitle>
                             <CardSubtitle
                                 className="mb-2 text-secondary fw-light"
@@ -55,12 +62,13 @@ function Benefits() {
                                 {getFormatDateForNews(item.updated)}
                             </CardSubtitle>
                             <CardText className='fw-light'>
-                                {item.abstract.length > 5 ? item.abstract.substring(0, 55) + "..." : title}
+                                {item.abstract.length > 55 ? item.abstract.substring(0, 55) + "..." : item.abstract}
                             </CardText>
-                            <Button onClick={() => handleSubmit(item.id, index)} className='fw-light text-light rounded-end border border-secondary' color='dark'>
+                            <Button onClick={() => handleSubmit(item.id, index)} className='fw-light text-light rounded-end border border-secondary mt-auto' color='dark'>
                                 Continue Reading
                             </Button>
                         </CardBody>
+
                     </Card>
                 ))}
             </div>
