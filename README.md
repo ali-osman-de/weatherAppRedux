@@ -2,7 +2,7 @@
 
 <a href="https://65e123a6e014d5508a64a89e--splendid-truffle-f1a668.netlify.app/">Open My Live Project<a/>
 <p>
-  How can it works! Firstly main page design is simple and useful. You see news and search your city. While you searching your city if you will not find your city, you can use your zip code. How about the news. it's working perfectly and you can click continue then you find a lots of news the other page. Enjoy while using.
+  How it works! Firstly main page design is simple and useful. You see news and search your city. While you searching your city if you will not find your city, you can use your zip code. How about the news. it's working perfectly and you can click continue then you find a lots of news the other page. Enjoy while using.
 </p>
 
 <p>I used New York Times and Weather Apis</p>
