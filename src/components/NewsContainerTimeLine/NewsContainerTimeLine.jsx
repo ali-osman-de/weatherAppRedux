@@ -19,24 +19,49 @@ function NewsContainerTimeLine() {
         const assetId = id;
         const selectedNews = news?.news?.results?.find(newsItem => newsItem.id === parseInt(assetId));
         dispatch(sendNews(selectedNews));
-        scrollUp(); // Sayfanın en üstüne kaydır
+        scrollUp();
     }
+
+    // Üçerli gruplara ayırma işlemi
+    const groupSize = 3;
+    const groupedKnowledge = knowledge.reduce((acc, val, i) => {
+        const groupIndex = Math.floor(i / groupSize);
+        if (!acc[groupIndex]) {
+            acc[groupIndex] = [];
+        }
+        acc[groupIndex].push(val);
+        return acc;
+    }, []);
 
     return (
         <div>
-            {knowledge.map((item, index) => (
-                <div key={index} className="card text-center rounded shadow-lg bg-dark opacity text-light my-3 border border-info-subtle mb-5">
-                    <img src={item.media[0]['media-metadata'][0].url} className='shadow-lg rounded-top' alt="picture" style={{
-                        height: "300px"
-                    }} />
-                    <div className="card-body">
-                        <h5 className="card-title fw-normal">{item.title}</h5>
-                        <p className="card-text">{item.description}</p>
-                        <a className="btn btn-warning" onClick={() => handleSubmit(item.id, index)}>Read More</a>
-                    </div>
-                    <div className="card-footer fw-lighter fs-6">
-                        {getFormatDateForNews(item.updated)}
-                    </div>
+            {groupedKnowledge.map((group, groupIndex) => (
+                <div key={groupIndex} className="row justify-content-center">
+                    {group.map((item, index) => (
+                        <div key={index} className="col-lg-4 my-4">
+                            <div className="card text-center rounded shadow-lg bg-dark opacity text-light my-3 border border-info-subtle mb-3" onClick={() => handleSubmit(item.id, index)} style={{
+                                height:"500px"
+                            }}>
+                                <img
+                                    src={item.media && item.media.length > 0 && item.media[0]['media-metadata'] ? item.media[0]['media-metadata'][0].url : 'varsayılan-resim-url'}
+                                    className='shadow-lg rounded-top'
+                                    alt="picture"
+                                    style={{
+                                        height: "300px",
+                                        objectFit: "cover"
+                                    }}
+                                />
+                                <div className="card-body">
+                                    <h5 className="card-title fw-normal">{item.title}</h5>
+                                    <p className="card-text">{item.description}</p>
+                                    <a className="btn btn-warning" >Read More</a>
+                                </div>
+                                <div className="my-3 fw-light fs-6 text-secondary">
+                                    {getFormatDateForNews(item.updated)}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             ))}
         </div>

@@ -7,20 +7,20 @@ import Footer from '../../components/Footer/Footer';
 
 function NewsPage() {
     useEffect(() => {
-        window.scrollTo(0, 0); 
-    }, []); 
+        window.scrollTo(0, 0);
+    }, []);
 
     return (
         <Container>
             <Header />
             <Row>
-                <Col xs="7">
+                <Col xs="12">
                     <NewsContianer />
                 </Col>
-                <Col xs="1">
-                    {/* Boş kolon */}
-                </Col>
-                <Col xs="4">
+            </Row>
+            <Row>
+                <Col xs="12">
+                    <h1 className='text-white text-center fs-1 fw-lighter'>More News</h1>
                     <NewsContainerTimeLine />
                 </Col>
             </Row>
