@@ -20,7 +20,7 @@ export const fetchNewsData = () => {
     return async (dispatch) => {
         dispatch(fetchNewsRequest());
         try {
-            const apiKey = 'adIUJJMWg4nfnv4tqzP138kuiBROSGBH';
+            const apiKey = 'YOUR-API-KEY';
             const apiUrl = `https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=${apiKey}`;
 
             const response = await fetch(apiUrl);
