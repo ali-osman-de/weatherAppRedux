@@ -20,7 +20,7 @@ export const fetchWeatherData = (city) => {
     return async (dispatch) => {
         dispatch(fetchWeatherRequest());
         try {
-            const apiKey = '2d06ccc131844b18b71204828231604';
+            const apiKey = 'YOUR-API-KEY';
             const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
 
             const response = await fetch(apiUrl);
