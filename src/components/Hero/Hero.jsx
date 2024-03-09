@@ -1,6 +1,7 @@
 import React from 'react'
 import "./hero.css"
 import { Button } from 'reactstrap'
+import "./hero.css"
 
 function Hero() {
 
@@ -12,7 +13,7 @@ function Hero() {
     };
 
     return (
-        <div className='backgroundHero bg-dark text-white p-5 text-center shadow-lg rounded-pill d-flex align-items-center justify-content-center my-4'>
+        <div className='backgroundHero '>
             <div className='text-center '>
                 <h1 className='fs-1'>
                     Weather Updates Now

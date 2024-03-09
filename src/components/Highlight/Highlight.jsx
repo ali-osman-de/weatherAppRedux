@@ -1,9 +1,10 @@
 import React from 'react'
 import { UncontrolledCarousel } from 'reactstrap'
+import "./Highlight.css"
 
 function Highlight() {
   return (
-    <div className='shadow-lg rounded-4 my-4'>
+    <div className='cpictures shadow-lg rounded-4 my-4'>
       <UncontrolledCarousel
         items={[
           {

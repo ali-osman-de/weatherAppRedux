@@ -1,13 +1,13 @@
 import React from 'react'
 import { TiWeatherDownpour, TiWeatherWindy, TiWeatherSnow, TiWeatherStormy, TiWeatherSunny } from "react-icons/ti";
-
+import "./Description.css"
 
 
 
 function Description() {
     return (
 
-        <div className='my-5 p-3 bg-dark text-light d-flex align-items-center justify-content-evenly shadow-lg rounded-4'>
+        <div className='reliable'>
             <h1 className='fs-4 fw-medium'>Reliable Data</h1>
             <hr className="my-0" style={{ height: "40px", borderLeft: "2px solid white" }} />
             <TiWeatherDownpour
