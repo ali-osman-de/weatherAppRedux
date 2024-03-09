@@ -5,9 +5,6 @@ import ResultPage from './pages/resultPage/ResultPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
-
-
-
 function App() {
 
   return (

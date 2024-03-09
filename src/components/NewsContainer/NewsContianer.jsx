@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import getFormatDate from '../../utils/getFormatDate';
+import "./NewsContainer.css"
 
 function NewsContainer() {
     const currentNews = useSelector(state => state.currentNews.currentNews);
@@ -14,6 +15,7 @@ function NewsContainer() {
 
         }
     }, [currentNews]);
+    console.log(currentNews)
 
     if (!newsData) {
         return (
@@ -34,7 +36,7 @@ function NewsContainer() {
                 <div className='mx-4'>
                     <img src={currentNews?.media[0]['media-metadata'][0]['url']} className='imageContainer shadow-lg rounded-4' alt="picture" />
                 </div>
-                <div className="title ">
+                <div className="title">
                     {newsData.title}
                     <div className="text-start lh-base mt-5">
                         <p className="paragraph">{newsData.abstract}</p>
