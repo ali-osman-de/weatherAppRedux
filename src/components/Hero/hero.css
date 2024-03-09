@@ -4,4 +4,36 @@
   background-size: cover;
   height: 50vh;
   background-repeat: no-repeat;
+  background-color: var(--bs-dark);
+  color: var(--bs-white);
+  padding: 5rem;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .backgroundHero {
+    background-image: url("../../../pexels-johannes-plenio-1118873.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
+    padding: 5rem;
+    text-align: center;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    border-radius: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+  }
 }

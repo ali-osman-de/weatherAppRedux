@@ -5,6 +5,7 @@ import { fetchNewsData } from '../../actions/fetchNewsData'
 import getFormatDateForNews from '../../utils/getFormatDateForNews'
 import { useNavigate } from 'react-router-dom'
 import { sendNews } from '../../reducer/currentNewsSlice'
+import "./Benefits.css"
 
 
 function Benefits() {
@@ -28,19 +29,14 @@ function Benefits() {
     return (
         <>
             <h1 className='fs-1 text-light fst-italic fw-lighter text-center m-4'>News About Weather</h1>
-            <div className='my-4 d-flex align-items-center justify-content-evenly' style={{
-                objectFit: "cover"
-            }}>
+            <div className='newsection'>
                 {selectedNews.map((item, index) => (
                     <Card
                         key={index}
-                        className='border-secondary rounded shadow-sm'
+                        className='news border-secondary rounded shadow-sm'
                         color="dark"
                         inverse
-                        style={{
-                            width: '18rem',
-                            height:"525px"
-                        }}
+
                     >
                         <img
                             src={item.media && item.media.length > 0 && item.media[0]['media-metadata'] ? item.media[0]['media-metadata'][0].url : 'varsayılan-resim-url'}

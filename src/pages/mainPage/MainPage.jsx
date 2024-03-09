@@ -27,10 +27,10 @@ function MainPage() {
                     </Col>
                 </Row>
                 <Row className='d-flex align-items-center'>
-                    <Col xs="6">
+                    <Col xs="12" md="6">
                         <SearchBar />
                     </Col>
-                    <Col xs="6">
+                    <Col xs="12" md="6">
                         <Highlight />
                     </Col>
                 </Row>
@@ -40,10 +40,10 @@ function MainPage() {
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs="6">
+                    <Col xs="12" md="6">
                         <FeatureHighPict />
                     </Col>
-                    <Col xs="6">
+                    <Col xs="12" md="6">
                         <FeatureHigh />
                     </Col>
                 </Row>

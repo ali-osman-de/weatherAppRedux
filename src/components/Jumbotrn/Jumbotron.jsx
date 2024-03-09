@@ -9,6 +9,7 @@ import getFormatDate from '../../utils/getFormatDate';
 import { useSelector } from 'react-redux';
 import Loading from '../Loading/Loading';
 import getWeatherData from '../../utils/getWeatherData';
+import "./Jumbotron.css"
 
 
 function Jumbotron() {
@@ -71,7 +72,7 @@ function Jumbotron() {
                             <h1 className='fs-1 fw-medium'>{Math.floor(getWeatherData(weather).temp)}°C</h1>
                         </div>
                         <div className='border-2 border-top m-5 opacity-50'></div>
-                        <div className='d-flex justify-content-evenly align-items-center'>
+                        <div className='weatherInfoSection'>
                             <div>
                                 <div className='d-flex justify-content-center align-items-center fs-4'>
                                     {getWeatherData(weather).wind}{renderWeatherWindDir()}

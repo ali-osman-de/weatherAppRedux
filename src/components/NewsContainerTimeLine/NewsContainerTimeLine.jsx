@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import getFormatDateForNews from '../../utils/getFormatDateForNews';
 import { sendNews } from '../../reducer/currentNewsSlice';
+import "./NewsContainerTimeLine.css"
 
 function NewsContainerTimeLine() {
     const news = useSelector(state => state.news);
@@ -38,7 +39,7 @@ function NewsContainerTimeLine() {
             {groupedKnowledge.map((group, groupIndex) => (
                 <div key={groupIndex} className="row justify-content-center">
                     {group.map((item, index) => (
-                        <div key={index} className="col-lg-4 my-4">
+                        <div key={index} className="col-lg-4 col-sm-4 my-4">
                             <div className="card text-center rounded shadow-lg bg-dark opacity text-light my-3 border border-info-subtle mb-3" onClick={() => handleSubmit(item.id, index)} style={{
                                 height:"500px"
                             }}>

@@ -28,23 +28,21 @@ function NewsContainer() {
     }
 
     return (
-        <div className="text-center rounded-3 shadow-lg bg-dark opacity text-light border border-info-subtle p-5 m-5">
+        <div className="newsContainer">
 
-            <div className='d-flex justify-content-evenly align-items-center mt-5'>
+            <div className='insideContainer'>
                 <div className='mx-4'>
-                    <img src={currentNews?.media[0]['media-metadata'][0]['url']} className='shadow-lg rounded-4' style={{
-                        height: "500px",
-                    }} alt="picture" />
+                    <img src={currentNews?.media[0]['media-metadata'][0]['url']} className='imageContainer shadow-lg rounded-4' alt="picture" />
                 </div>
-                <div className="fs-2 fw-semibold text-start">
+                <div className="title ">
                     {newsData.title}
                     <div className="text-start lh-base mt-5">
-                        <p className=" fs-5 fw-light">{newsData.abstract}</p>
+                        <p className="paragraph">{newsData.abstract}</p>
                     </div>
                 </div>
 
             </div>
-            <div className="card-footer text-end fw-lighter fs-5 mt-3 text-secondary">
+            <div className="cardfooter ">
                 {newsData.publish_date}
             </div>
 
